@@ -32,10 +32,21 @@ public class Login_Test_Cases extends Parameters  {
 		public void CreatOneUser() {
 			WebElement firstName =driver.findElement(By.id("firstname"));
 			WebElement lastName =driver.findElement(By.id("lastname"));
-			
-			
+		WebElement enterEmail =driver.findElement(By.id("email_address"));
+			WebElement password =driver.findElement(By.id("password"));
+			WebElement cofirmPassword =driver.findElement(By.id("password-confirmation"));
+			WebElement pressBotten =driver.findElement(By.className("action"));
+	
 			firstName.sendKeys(firstNameRandom);
 			lastName.sendKeys(lasttNameRandom);
+			enterEmail.sendKeys(randomEmail);
+			password.sendKeys(passwordd);
+			cofirmPassword.sendKeys(passwordd);
+			pressBotten.click();
+			
+			
+			
+			
 			Check.assertAll();
 
 			
@@ -45,6 +56,7 @@ public class Login_Test_Cases extends Parameters  {
 		
 		@AfterTest
 		public void MyAfterTest() {
+//			driver.quit();
 
 		}
 

@@ -21,10 +21,22 @@ public class SignupTest_Cases  extends Parameters {
 	}
 	
 	@Test 
-	public void LoginUser() {}
+	public void LoginUser() {
+		WebElement enterEmail =driver.findElement(By.id("email"));
+		enterEmail.sendKeys(randomEmail);
+		WebElement password =driver.findElement(By.id("pass"));
+		password.sendKeys(passwordd);
+		WebElement signi=driver.findElement(By.id("send2"));
+		signi.click();
+		
+
+
+	}
 	
 	@AfterTest
-	public void MyAfterTest() {}
+	public void MyAfterTest() {
+		driver.quit();
+	}
 	
 
 }
